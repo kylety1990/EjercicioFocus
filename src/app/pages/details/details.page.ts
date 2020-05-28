@@ -20,7 +20,6 @@ export class DetailsPage implements OnInit {
     this.json.getUserDetails(result).subscribe((res : any) => {
       // this.User = res;
       this.User = res.data;
-      console.log(this.User)
     })
    }
 
