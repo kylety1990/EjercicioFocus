@@ -1,16 +1,15 @@
 {
-  "name": "EjercicioFocus",
+  "name": "ejerciciofocus",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ionic-app-script build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --target=production"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -31,9 +30,7 @@
     "morgan": "^1.10.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.5",
@@ -58,6 +55,10 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "engines": {
+    "node": "12.9.0",
+    "npm": "6.10.2"
   },
   "description": "An Ionic project"
 }
