@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="start" >
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-title>User details</ion-title>
@@ -9,22 +9,22 @@
 
 <ion-content>
   <ion-item>
-    <ion-label position="fixed">ID</ion-label>
-    <ion-input>{{User.id}}</ion-input>
+    <ion-label position="stacked">ID</ion-label>
+    <ion-input >{{User.email}}</ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Email
-    </ion-label>
+    <ion-label position="stacked">Email</ion-label>
     <ion-input>{{User.email}}</ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>First Name</ion-label>
+    <ion-label position="stacked">First Name</ion-label>
     <ion-input>{{User.first_name}}</ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Last Name</ion-label>
+    <ion-label position="stacked">Last Name</ion-label>
     <ion-input>{{User.last_name}}</ion-input>
   </ion-item>
-
-
+  <ion-card >
+    <img src={{User.avatar}}>
+  </ion-card>
 </ion-content>

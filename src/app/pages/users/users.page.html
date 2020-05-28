@@ -6,15 +6,14 @@
 
 <ion-content>
   <ion-item *ngFor="let user of users" size="large" button="true" [routerLink]="['/details', user.id] " >
-
+    
       <ion-avatar>
         <img src={{user.avatar}}>
       </ion-avatar>
-   
+
       <ion-label>{{user.first_name}} {{user.last_name}}</ion-label>
   
-      <ion-icon name="arrow-forward-circle-outline"></ion-icon>
-     
+
   </ion-item>
  
 
