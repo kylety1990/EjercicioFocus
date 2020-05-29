@@ -3,18 +3,20 @@
     <ion-title>Users List</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-item *ngFor="let user of users" size="large" button="true" [routerLink]="['/details', user.id] " >
-    
-      <ion-avatar>
-        <img src={{user.avatar}}>
-      </ion-avatar>
-
-      <ion-label>{{user.first_name}} {{user.last_name}}</ion-label>
-  
-
+  <ion-buttons slot="primary">
+    <ion-button (click)="clickedSearch()">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-searchbar 
+      placeholder="Search User" 
+      animated 
+      (ionChange)="searchUser($event)"></ion-searchbar>
+  <ion-item *ngFor="let user of users | filtro:search" size="large" button="true" [routerLink]="['/details', user.id] ">
+    <ion-avatar>
+      <img src={{user.avatar}}>
+    </ion-avatar>
+    <ion-label>{{user.first_name}} {{user.last_name}}</ion-label>
   </ion-item>
- 
-
 </ion-content>
